@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[PHP中的Array]]></title>
+    <url>%2F2019%2F03%2F29%2FPHP%E4%B8%AD%E7%9A%84Array%2F</url>
+    <content type="text"><![CDATA[1.概览PHP中的数组很有意思，有点像python中的列表和字典的综合体，当然也有区别。 PHP 中的数组实际上是一个有序映射。映射是一种把 values 关联到 keys 的类型。此类型在很多方面做了优化，因此可以把它当成真正的数组，或列表（向量），散列表（是映射的一种实现），字典，集合，栈，队列以及更多可能性。由于数组元素的值也可以是另一个数组，树形结构和多维数组也是允许的。 新建一个数组的方式很简单： $arr = array(1, 2, 3); // PHP 5.4 $arr = [1, 2, 3]; $arr = array( &quot;foo&quot; =&gt; &quot;bar&quot;, &quot;bar&quot; =&gt; &quot;foo&quot;, ); 2.数组中的KeyPHP的数组，由键值对组成，键（key）可是是一个整数 integer 或字符串 string； 值（value）可以是任意类型的值。 此外 key 会有如下的强制转换： 包含有合法整型值的字符串会被转换为整型。例如键名 “8” 实际会被储存为 8。但是 “08” 则不会强制转换，因为其不是一个合法的十进制数值。 浮点数也会被转换为整型，意味着其小数部分会被舍去。例如键名 8.7 实际会被储存为 8。 布尔值也会被转换成整型。即键名 true 实际会被储存为 1 而键名 false 会被储存为 0。 Null 会被转换为空字符串，即键名 null 实际会被储存为 “”。 数组和对象不能被用为键名。坚持这么做会导致警告：Illegal offset type。如果在数组定义中多个单元都使用了同一个键名，则只使用了最后一个，之前的都被覆盖了。 key的转换，简单的说是，能往整数转就往整数转，不能就保留字符串，同键名保留最后的值。 仅指定部分键名的话，后续键名会自动采用之前最大整数值加1作为新键名，以此类推。 $array = array( &quot;a&quot;, &quot;b&quot;, 6 =&gt; &quot;c&quot;, &quot;d&quot;, // key为7 ); 3.数组中的值通过方括号来修改，也可以新建。通过unset()函数删除。 $arr = array(5 =&gt; 1, 12 =&gt; 2); $arr[] = 56; // 增加一个值，相当于 13 =&gt; 56 // array(5=&gt;1, 12=&gt;2, 13=&gt;56); $arr[&quot;x&quot;] = 42; // 增加一个值， &quot;x&quot; =&gt; 42 // array(5=&gt;1, 12=&gt;2, 13=&gt;56, &quot;x&quot;=&gt;42); unset($arr[5]); // 删除对应的键值 // array(12=&gt;2, 13=&gt;56, &quot;x&quot;=&gt;42); unset($arr); // 删除整个数组 4.其他遍历数组中的值： foreach($array as $value){ echo $value; // ... } 数组的复制： 数组(Array) 的赋值总是会涉及到值的拷贝。使用引用运算符通过引用来拷贝数组。 $arr1 = array(2, 3); $arr2 = $arr1; $arr2[] = 4; // $arr2 变成 array(2, 3, 4); // $arr1 没变 $arr3 = &amp;$arr1; $arr3[] = 4; // $arr1 和 $arr3 都改变]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>PHP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[惊蛰]]></title>
     <url>%2F2019%2F03%2F06%2F%E6%83%8A%E8%9B%B0%2F</url>
     <content type="text"><![CDATA[今天是惊蛰 动物昆虫自入冬以来即藏伏土中，不饮不食，称为“蛰”；到了这时天气转暖，大地春雷，而“惊蛰”即上天以打雷方式惊醒蛰居动物的冬眠。 弄了一天，终于把hexo的博客弄好，踩了不少坑。]]></content>
