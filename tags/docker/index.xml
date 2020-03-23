@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on 岛风依旧</title>
+    <link>http://maisy.vip/tags/docker/</link>
+    <description>Recent content in docker on 岛风依旧</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 23 Mar 2020 15:40:11 +0800</lastBuildDate>
+    
+	<atom:link href="http://maisy.vip/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docker入门</title>
+      <link>http://maisy.vip/post/docker%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Mon, 23 Mar 2020 15:40:11 +0800</pubDate>
+      
+      <guid>http://maisy.vip/post/docker%E5%85%A5%E9%97%A8/</guid>
+      <description>安装 Ubuntu18.04 配置了阿里源 1 2 3 4 5 6 # 安装命令 apt install docker.io # 查看版本信息 docker -v # Docker version 19.03.6, build 369ce74a3c 这个安装命令比较简单，但是版本可能不是最新的，区别不大。 更换国内</description>
+    </item>
+    
+  </channel>
+</rss>
